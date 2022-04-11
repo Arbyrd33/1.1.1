@@ -16,8 +16,16 @@ We create a branch to avoid crowding the main branch with conflicting commits fr
 Pull Reqs are used in large-scale contributions. A senior developer will look at your pull request and examine the differences between your branch and the main branch. 
 
 5. What is the command you can use to switch between branches? For example you are working on FIRSTNAME-LASTNAME branch and you want to switch back to main.
+First, type `git branch` to determine what branches are available.
+Next, type `git checkout <branch>`. (example, `git checkout main`, or `git checkout arbor-matos`)
 
 6. Explain the difference between `git fetch`, `git merge` and `git pull`. What does each command do?
+`git fetch` downloads objects and other assets from a remote repository.
+
+`git merge` takes independent lines of development created by multiple users' branches and puts them into one (1) branch.
+
+`git pull` is kind of like a one-stop-shop for fetching and merging all the changes from a remote repository.
+
 
 7. What is a merge conflict?
 
