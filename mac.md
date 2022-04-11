@@ -28,5 +28,27 @@ Next, type `git checkout <branch>`. (example, `git checkout main`, or `git check
 
 
 7. What is a merge conflict?
+Merge conflicts arise when changes are made to the same line of a file by multiple different people (more than one). It can also happen when one person tries to edit a file and another person simply deletes the file.
 
 8. How do you resolve a merge conflict?
+To resolve a merge conflict, navigate into the local repo that has the conflict via the terminal.
+Type `git status`; it will tell you what branch you've got conflicts on, and in what files.
+On Mac, you can type `code .` to open VSCode (or another text editor) and search for the conflict marker `<<<<<<< HEAD`, followed by one line of code, the branch partition `=======`, another line of code, and the the end of the conflict marker `>>>>>>> BRANCH-NAME`. It will all look like this put together: 
+
+
+good morning,
+`<<<<<<< HEAD`
+sleepy head~!
+`=======`
+starshine, the earth says hello!
+`>>>>>>> arbor-matos`
+
+(You'll see it without the backticks, but without backticks it actually registers as a conflict and will not be pushable lmao)
+
+
+Determine which version you want to keep, delete the conflict tags, stage your changes, and commit. 
+The end result will look super natural and such:
+
+
+
+Good morning, starshine, the earth says hello!
